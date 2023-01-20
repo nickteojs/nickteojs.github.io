@@ -1,0 +1,543 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./assets/images/bgwithlogo.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 135% 135%;
+    background-position: 55% 55%;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+p, li {
+    font-size: 0.875rem;
+}
+
+// Font Faces
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("./fonts/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway Sub-Heading";
+    src: url("./fonts/Raleway/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Raleway Bold";
+    src: url("./fonts/Raleway/Raleway-Bold.ttf");
+}
+
+// Main Colors
+$background-color: #1D1D23;
+$primary-color: #2F2F37;
+$secondary-color: #030303;
+$accent-color: #525E7E;
+$accent-color-light: #7487b9;
+$light: #D6D6D6;
+$light-body: #b6b6b6;
+
+// Font Sizes
+$heading: 4rem;
+$sub-heading: 1.5rem;
+$font-main: 'Montserrat Bold';
+$font-body: 'Raleway';
+$font-subheading: 'Raleway Sub-Heading';
+$font-button: 'Raleway Bold';
+
+a:link, a:visited {
+    text-decoration: none;
+    color: $light;
+}
+
+.hero-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.line {
+    width: 0px;
+    background-color: $accent-color;
+    height: 5px;
+    margin-block: 1rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.snap-parent {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-child {
+    scroll-snap-align: start;
+}
+
+.hover {
+    transition: 0.25s all ease-in-out;
+    &:hover {
+        color: $accent-color-light;
+    }
+}
+
+#next-section {
+    display: flex;
+    justify-content: center;
+}
+
+.next-section {
+    color: $light;
+    bottom: 50px;
+    position: relative;
+}
+
+.btt {
+    color: $light;
+    top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+// Hero Section
+#hero {
+    width: 100%;
+    height: 100vh;
+    #hero-copy {
+        margin-left: 2.25rem;
+        font-family: $font-body;
+        color: $light;
+        font-size: 0.75rem;
+        // Animation Grouping
+        #name-role {
+            position: relative;
+            opacity: 0;
+            top: 50px;
+        }
+        h1 {
+            font-size: 2.75rem;
+            font-family: $font-main;
+            color: #EEEEEE;
+            margin-bottom: 0.25rem;
+        }
+        // Animation Grouping
+        #stack-links {
+            position: relative;
+            opacity: 0;
+            top: -50px;
+        }
+        #hero-description, #role {
+            margin-left: 3px;
+        }
+        #links {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            .link-item {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.logo-container {
+    width: 300px;
+    height: 500px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    #logo {
+        opacity: 0;
+        filter: drop-shadow(-4px 17px 7px rgb(0 0 0 / 0.3));
+    }
+}
+
+// Projects
+#projects {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100vh;
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    #project-title, #project-list, #project-controls, #project-name, 
+    #project-desc, #project-thumbnail {
+        opacity: 0;
+        position: relative;
+        top: 50px;
+    }
+    h3 {
+        font-size: $sub-heading;
+        font-family: $font-subheading;
+        color: $light;
+        text-align: center;
+    }
+    #project-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        text-align: center;
+        .project-item {
+            cursor: pointer;
+            i {
+                margin-bottom: 0.75rem;
+            }
+        }
+    
+    }
+    #project-controls {
+        width: 65%;
+        background-color: $primary-color;
+        height: 3px;
+        margin: 1rem 0 2rem 0;
+        border-radius: 5px;
+        #slider {
+            width: 30%;
+            background-color: $accent-color;
+            height: 3px;
+            border-radius: 5px;
+            transition: 0.5s transform ease-in-out;
+        }
+    }
+    #project-card {
+        width: 65%;
+        background-color: $background-color;
+        border-radius: 2rem;
+        color: $light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            margin-block: 1.5rem;
+        }
+        #project-desc {
+            color: $light;
+            max-width: 80%;
+            p {
+                font-size: 0.875rem;
+                margin-bottom: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        #project-thumbnail {
+            max-width: 80%;
+            border-radius: 1rem;
+            margin-block: 0.5rem;
+        }
+        #project-buttons {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-block: 2rem;
+            button {
+                opacity: 0;
+                background-color: #424B64;
+                font-family: $font-button;
+                color: $light;
+                padding: 1rem 2rem;
+                border-radius: 1rem;
+                border: none;
+                cursor: pointer;
+                transition: 0.25s ease-in-out;
+                &:hover {
+                    background-color: #32394d;
+                }
+            }
+        }
+    }
+}
+
+#experience {
+    width: 100%;
+    height: 100vh;
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #experience-title, #company-title {
+        opacity: 0;
+        position: relative;
+        top: 50px;
+    }
+    #role-stack, #experience-description {
+        opacity: 0;
+        position: relative;
+        top: -50px;
+    }
+    h3 {
+        font-size: $sub-heading;
+        font-family: $font-subheading;
+        color: $light;
+    }
+    #experience-copy {
+        width: 80%;
+        color: $light;
+        font-family: $font-body;
+        .line {
+            width: 0%;
+        }
+        #role-stack {
+            margin-bottom: 1.5rem;
+            p {
+                &:last-child {
+                    margin-top: 0.3rem;
+                }
+            }
+            #stack-date {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+        #date {
+            margin-bottom: 1.25rem;
+        }
+        #experience-description {
+            color: $light-body;
+            overflow-y: scroll;
+            max-height: 60%;
+            color: $light;
+            ul {
+                padding-left: 1.25rem;
+                li {
+                    line-height: 1.4rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+// Media Queries
+@media (min-width: 320px) {
+    body {
+        background-size: 150% 130%;
+        background-position: 62% 55%;
+        #hero {
+            #hero-copy {
+                margin-left: 2rem;
+            }
+        }
+        #projects {
+            #project-list {
+                width: 80%;
+                .project-item {
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            #project-card {
+                width: 85%;
+                #project-buttons {
+                    width: auto;
+                    margin-block: 1rem;
+                    button {
+                        padding: 0.75rem 1.75rem;
+                    }
+                }
+            }
+        }
+        #experience {
+            #experience-copy {
+                max-height: 70%;
+            }
+        }
+    }
+}
+@media (min-width: 360px) {
+    body {
+        background-size: 150% 155%;
+        background-position: 62% 55%;
+    }
+}
+@media (min-width: 375px) {
+    html {
+        font-size: 16px;
+    }
+    .btt  {
+        top: 130px;
+    }
+    body {
+        background-size: 150% 160%;
+        background-position: 60% 55%;
+        #projects {
+            #project-card {
+                #project-name {
+                    margin-block: 1rem;
+                }
+                #project-thumbnail {
+                    width: 80%;
+                    height: 40%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 390px) {
+    body {
+        background-size: 150% 150%;
+        background-position: 60% 55%;
+    }
+}
+
+@media (min-width: 414px) {
+    body {
+        background-size: 150% 150%;
+        background-position: 60% 50%;
+    }
+}
+
+@media (min-width: 425px) {
+    body {
+        background: linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(27,33,45,1) 100%);
+        #hero {
+            #hero-copy {
+                margin-left: 3rem;
+            }
+        }
+        #projects {
+            #project-card {
+                background-color: rgba(16, 16, 16, 0.25);
+            }
+        }
+    }
+}
+
+// Tablets
+@media (min-width: 768px) {
+    p, li {
+        font-size: 1rem !important;
+    }
+    .header {
+        margin-bottom: 3rem;
+    }
+    body {
+        #hero {
+            background-image: none;
+            #hero-copy {
+                h1 {
+                    font-size: $heading;
+                }
+            }
+            .hero-container {
+                justify-content: space-around;
+            }
+        }
+        #projects {
+            max-width: 600px;
+            #project-list {
+                width: 70%;
+            }
+            .project-item {
+                display: flex;
+                justify-content: center;
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+            #project-controls {
+                width: 65%;
+                margin-left: 0.75rem;
+            }
+            #project-card {
+                #project-name {
+                    margin: 2rem 0 1rem 0;
+                }
+                #project-desc {
+                    max-width: 75%;
+                    color: $light-body;
+                }
+                #project-thumbnail {
+                    width: 65%;
+                    height: 100%;
+                }
+                #project-buttons {
+                    margin-block: 2rem;
+                }
+            }
+        }
+        .logo-container {
+            display: flex;
+        }
+        #experience {
+            margin: 0 auto;
+            max-width: 850px;
+            #experience-copy {
+                #role-stack {
+                    #stack-date {
+                        flex-direction: row;
+                        #date {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                #experience-description {
+                    color: $light-body;
+                    overflow: hidden;
+                    max-height: min-content;
+                }
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes slide-right-1 {
+    to {
+        transform: translateX(115%);
+    }
+}
+
+@keyframes slide-right-2 {
+    to {
+        transform: translateX(235%);
+    }
+}
+
+@keyframes slide-left-1 {
+    to {
+        transform: translateX(115%);
+    }
+}
+
+@keyframes slide-left-2 {
+    to {
+        transform: translateX(0%);
+    }
+}

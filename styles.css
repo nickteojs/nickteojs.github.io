@@ -1,0 +1,500 @@
+html {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./assets/images/bgwithlogo.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 135% 135%;
+  background-position: 55% 55%;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+p, li {
+  font-size: 0.875rem;
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/Raleway/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway Sub-Heading";
+  src: url("./fonts/Raleway/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("./fonts/Raleway/Raleway-Bold.ttf");
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: #D6D6D6;
+}
+
+.hero-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.line {
+  width: 0px;
+  background-color: #525E7E;
+  height: 5px;
+  margin-block: 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.snap-parent {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.snap-child {
+  scroll-snap-align: start;
+}
+
+.hover {
+  transition: 0.25s all ease-in-out;
+}
+.hover:hover {
+  color: #7487b9;
+}
+
+#next-section {
+  display: flex;
+  justify-content: center;
+}
+
+.next-section {
+  color: #D6D6D6;
+  bottom: 50px;
+  position: relative;
+}
+
+.btt {
+  color: #D6D6D6;
+  top: 50px;
+  position: relative;
+  text-align: center;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+}
+#hero #hero-copy {
+  margin-left: 2.25rem;
+  font-family: "Raleway";
+  color: #D6D6D6;
+  font-size: 0.75rem;
+}
+#hero #hero-copy #name-role {
+  position: relative;
+  opacity: 0;
+  top: 50px;
+}
+#hero #hero-copy h1 {
+  font-size: 2.75rem;
+  font-family: "Montserrat Bold";
+  color: #EEEEEE;
+  margin-bottom: 0.25rem;
+}
+#hero #hero-copy #stack-links {
+  position: relative;
+  opacity: 0;
+  top: -50px;
+}
+#hero #hero-copy #hero-description, #hero #hero-copy #role {
+  margin-left: 3px;
+}
+#hero #hero-copy #links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+#hero #hero-copy #links .link-item {
+  margin-right: 1.5rem;
+}
+
+.logo-container {
+  width: 300px;
+  height: 500px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+.logo-container #logo {
+  opacity: 0;
+  filter: drop-shadow(-4px 17px 7px rgba(0, 0, 0, 0.3));
+}
+
+#projects {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 100vh;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #D6D6D6;
+}
+#projects #project-title, #projects #project-list, #projects #project-controls, #projects #project-name,
+#projects #project-desc, #projects #project-thumbnail {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+#projects h3 {
+  font-size: 1.5rem;
+  font-family: "Raleway Sub-Heading";
+  color: #D6D6D6;
+  text-align: center;
+}
+#projects #project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+#projects #project-list .project-item {
+  cursor: pointer;
+}
+#projects #project-list .project-item i {
+  margin-bottom: 0.75rem;
+}
+#projects #project-controls {
+  width: 65%;
+  background-color: #2F2F37;
+  height: 3px;
+  margin: 1rem 0 2rem 0;
+  border-radius: 5px;
+}
+#projects #project-controls #slider {
+  width: 30%;
+  background-color: #525E7E;
+  height: 3px;
+  border-radius: 5px;
+  transition: 0.5s transform ease-in-out;
+}
+#projects #project-card {
+  width: 65%;
+  background-color: #1D1D23;
+  border-radius: 2rem;
+  color: #D6D6D6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#projects #project-card h3 {
+  margin-block: 1.5rem;
+}
+#projects #project-card #project-desc {
+  color: #D6D6D6;
+  max-width: 80%;
+}
+#projects #project-card #project-desc p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+#projects #project-card #project-thumbnail {
+  max-width: 80%;
+  border-radius: 1rem;
+  margin-block: 0.5rem;
+}
+#projects #project-card #project-buttons {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-block: 2rem;
+}
+#projects #project-card #project-buttons button {
+  opacity: 0;
+  background-color: #424B64;
+  font-family: "Raleway Bold";
+  color: #D6D6D6;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+#projects #project-card #project-buttons button:hover {
+  background-color: #32394d;
+}
+
+#experience {
+  width: 100%;
+  height: 100vh;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#experience #experience-title, #experience #company-title {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+#experience #role-stack, #experience #experience-description {
+  opacity: 0;
+  position: relative;
+  top: -50px;
+}
+#experience h3 {
+  font-size: 1.5rem;
+  font-family: "Raleway Sub-Heading";
+  color: #D6D6D6;
+}
+#experience #experience-copy {
+  width: 80%;
+  color: #D6D6D6;
+  font-family: "Raleway";
+}
+#experience #experience-copy .line {
+  width: 0%;
+}
+#experience #experience-copy #role-stack {
+  margin-bottom: 1.5rem;
+}
+#experience #experience-copy #role-stack p:last-child {
+  margin-top: 0.3rem;
+}
+#experience #experience-copy #role-stack #stack-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#experience #experience-copy #date {
+  margin-bottom: 1.25rem;
+}
+#experience #experience-copy #experience-description {
+  color: #b6b6b6;
+  overflow-y: scroll;
+  max-height: 60%;
+  color: #D6D6D6;
+}
+#experience #experience-copy #experience-description ul {
+  padding-left: 1.25rem;
+}
+#experience #experience-copy #experience-description ul li {
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 320px) {
+  body {
+    background-size: 150% 130%;
+    background-position: 62% 55%;
+  }
+  body #hero #hero-copy {
+    margin-left: 2rem;
+  }
+  body #projects #project-list {
+    width: 80%;
+  }
+  body #projects #project-list .project-item p {
+    font-size: 0.7rem;
+  }
+  body #projects #project-card {
+    width: 85%;
+  }
+  body #projects #project-card #project-buttons {
+    width: auto;
+    margin-block: 1rem;
+  }
+  body #projects #project-card #project-buttons button {
+    padding: 0.75rem 1.75rem;
+  }
+  body #experience #experience-copy {
+    max-height: 70%;
+  }
+}
+@media (min-width: 360px) {
+  body {
+    background-size: 150% 155%;
+    background-position: 62% 55%;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 16px;
+  }
+  .btt {
+    top: 130px;
+  }
+  body {
+    background-size: 150% 160%;
+    background-position: 60% 55%;
+  }
+  body #projects #project-card #project-name {
+    margin-block: 1rem;
+  }
+  body #projects #project-card #project-thumbnail {
+    width: 80%;
+    height: 40%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 390px) {
+  body {
+    background-size: 150% 150%;
+    background-position: 60% 55%;
+  }
+}
+@media (min-width: 414px) {
+  body {
+    background-size: 150% 150%;
+    background-position: 60% 50%;
+  }
+}
+@media (min-width: 425px) {
+  body {
+    background: linear-gradient(90deg, rgb(29, 29, 35) 0%, rgb(27, 33, 45) 100%);
+  }
+  body #hero #hero-copy {
+    margin-left: 3rem;
+  }
+  body #projects #project-card {
+    background-color: rgba(16, 16, 16, 0.25);
+  }
+}
+@media (min-width: 768px) {
+  p, li {
+    font-size: 1rem !important;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+  body #hero {
+    background-image: none;
+  }
+  body #hero #hero-copy h1 {
+    font-size: 4rem;
+  }
+  body #hero .hero-container {
+    justify-content: space-around;
+  }
+  body #projects {
+    max-width: 600px;
+  }
+  body #projects #project-list {
+    width: 70%;
+  }
+  body #projects .project-item {
+    display: flex;
+    justify-content: center;
+  }
+  body #projects .project-item i {
+    margin-right: 0.5rem;
+  }
+  body #projects #project-controls {
+    width: 65%;
+    margin-left: 0.75rem;
+  }
+  body #projects #project-card #project-name {
+    margin: 2rem 0 1rem 0;
+  }
+  body #projects #project-card #project-desc {
+    max-width: 75%;
+    color: #b6b6b6;
+  }
+  body #projects #project-card #project-thumbnail {
+    width: 65%;
+    height: 100%;
+  }
+  body #projects #project-card #project-buttons {
+    margin-block: 2rem;
+  }
+  body .logo-container {
+    display: flex;
+  }
+  body #experience {
+    margin: 0 auto;
+    max-width: 850px;
+  }
+  body #experience #experience-copy #role-stack #stack-date {
+    flex-direction: row;
+  }
+  body #experience #experience-copy #role-stack #stack-date #date {
+    margin-bottom: 0;
+  }
+  body #experience #experience-copy #experience-description {
+    color: #b6b6b6;
+    overflow: hidden;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+}
+@-webkit-keyframes slide-right-1 {
+  to {
+    transform: translateX(115%);
+  }
+}
+@keyframes slide-right-1 {
+  to {
+    transform: translateX(115%);
+  }
+}
+@-webkit-keyframes slide-right-2 {
+  to {
+    transform: translateX(235%);
+  }
+}
+@keyframes slide-right-2 {
+  to {
+    transform: translateX(235%);
+  }
+}
+@-webkit-keyframes slide-left-1 {
+  to {
+    transform: translateX(115%);
+  }
+}
+@keyframes slide-left-1 {
+  to {
+    transform: translateX(115%);
+  }
+}
+@-webkit-keyframes slide-left-2 {
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-left-2 {
+  to {
+    transform: translateX(0%);
+  }
+}/*# sourceMappingURL=styles.css.map */
