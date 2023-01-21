@@ -10,11 +10,7 @@ html {
 }
 
 body {
-  background-image: url("./assets/images/bgwithlogo.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 135% 135%;
-  background-position: 55% 55%;
+  background: linear-gradient(90deg, rgb(29, 29, 35) 0%, rgb(27, 33, 45) 100%);
 }
 
 section {
@@ -90,13 +86,13 @@ a:link, a:visited {
 
 .next-section {
   color: #D6D6D6;
-  bottom: 50px;
+  bottom: 100px;
   position: relative;
 }
 
 .btt {
   color: #D6D6D6;
-  top: 50px;
+  top: 0px;
   position: relative;
   text-align: center;
 }
@@ -204,7 +200,7 @@ a:link, a:visited {
 }
 #projects #project-card {
   width: 65%;
-  background-color: #1D1D23;
+  background-color: rgba(16, 16, 16, 0.25);
   border-radius: 2rem;
   color: #D6D6D6;
   display: flex;
@@ -380,14 +376,8 @@ a:link, a:visited {
   }
 }
 @media (min-width: 425px) {
-  body {
-    background: linear-gradient(90deg, rgb(29, 29, 35) 0%, rgb(27, 33, 45) 100%);
-  }
   body #hero #hero-copy {
     margin-left: 3rem;
-  }
-  body #projects #project-card {
-    background-color: rgba(16, 16, 16, 0.25);
   }
 }
 @media (min-width: 768px) {

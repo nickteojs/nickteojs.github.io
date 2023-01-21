@@ -9,11 +9,12 @@ html {
 }
 
 body {
-    background-image: url('./assets/images/bgwithlogo.png');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 135% 135%;
-    background-position: 55% 55%;
+    background: linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(27,33,45,1) 100%);
+    // background-image: url('./assets/images/bgwithlogo.png');
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-size: 135% 135%;
+    // background-position: 55% 55%;
 }
 
 section {
@@ -110,13 +111,13 @@ a:link, a:visited {
 
 .next-section {
     color: $light;
-    bottom: 50px;
+    bottom: 100px;
     position: relative;
 }
 
 .btt {
     color: $light;
-    top: 50px;
+    top: 0px;
     position: relative;
     text-align: center;
 }
@@ -228,7 +229,7 @@ a:link, a:visited {
     }
     #project-card {
         width: 65%;
-        background-color: $background-color;
+        background-color: rgba(16, 16, 16, 0.25);
         border-radius: 2rem;
         color: $light;
         display: flex;
@@ -425,7 +426,6 @@ a:link, a:visited {
 
 @media (min-width: 425px) {
     body {
-        background: linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(27,33,45,1) 100%);
         #hero {
             #hero-copy {
                 margin-left: 3rem;
@@ -433,7 +433,6 @@ a:link, a:visited {
         }
         #projects {
             #project-card {
-                background-color: rgba(16, 16, 16, 0.25);
             }
         }
     }
