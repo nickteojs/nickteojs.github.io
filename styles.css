@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, rgb(29, 29, 35) 0%, rgb(27, 33, 45) 100%);
+  background: linear-gradient(90deg, rgb(30, 30, 42) 0%, rgb(35, 52, 85) 100%);
 }
 
 section {
@@ -72,13 +72,6 @@ a:link, a:visited {
   scroll-snap-align: start;
 }
 
-.hover {
-  transition: 0.25s all ease-in-out;
-}
-.hover:hover {
-  color: #7487b9;
-}
-
 #next-section {
   display: flex;
   justify-content: center;
@@ -86,13 +79,13 @@ a:link, a:visited {
 
 .next-section {
   color: #D6D6D6;
-  bottom: 100px;
+  bottom: 200px;
   position: relative;
 }
 
 .btt {
   color: #D6D6D6;
-  top: 0px;
+  top: -30px;
   position: relative;
   text-align: center;
 }
@@ -308,6 +301,14 @@ a:link, a:visited {
   margin-bottom: 1rem;
 }
 
+@media not all and (hover: none) {
+  .hover {
+    transition: 0.25s all ease-in-out;
+  }
+  .hover:hover {
+    color: #7487b9;
+  }
+}
 @media (min-width: 320px) {
   body {
     background-size: 150% 130%;
@@ -386,6 +387,9 @@ a:link, a:visited {
   }
   .header {
     margin-bottom: 3rem;
+  }
+  body {
+    background: linear-gradient(90deg, rgb(31, 31, 38) 0%, rgb(30, 37, 51) 100%);
   }
   body #hero {
     background-image: none;

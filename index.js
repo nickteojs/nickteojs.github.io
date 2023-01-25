@@ -22,6 +22,11 @@ window.addEventListener('resize', () => {
 // Logo Controller
 const logo = document.getElementById('logo');
 
+screen.orientation.addEventListener('change', (e) => {
+    console.log(e);
+    console.log("Orientation changed");
+})
+
 const rotateLogo = e => {
     const horizontalDeg = (((e.clientX / window.innerWidth) * 90) - 45) / 3.5;
     const verticalDeg = ((e.clientY / window.innerHeight * 90) - 45) / 4;

@@ -9,12 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(27,33,45,1) 100%);
-    // background-image: url('./assets/images/bgwithlogo.png');
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-size: 135% 135%;
-    // background-position: 55% 55%;
+    background: linear-gradient(90deg, rgba(30,30,42,1) 0%, rgba(35,52,85,1) 100%);
 }
 
 section {
@@ -97,13 +92,6 @@ a:link, a:visited {
     scroll-snap-align: start;
 }
 
-.hover {
-    transition: 0.25s all ease-in-out;
-    &:hover {
-        color: $accent-color-light;
-    }
-}
-
 #next-section {
     display: flex;
     justify-content: center;
@@ -111,13 +99,13 @@ a:link, a:visited {
 
 .next-section {
     color: $light;
-    bottom: 100px;
+    bottom: 200px;
     position: relative;
 }
 
 .btt {
     color: $light;
-    top: 0px;
+    top: -30px;
     position: relative;
     text-align: center;
 }
@@ -343,6 +331,16 @@ a:link, a:visited {
 
 
 // Media Queries
+// Prevent hover state on mobile
+@media not all and (hover: none) {   
+    .hover {
+        transition: 0.25s all ease-in-out;
+        &:hover {
+            color: $accent-color-light;
+        }
+    }
+}
+
 @media (min-width: 320px) {
     body {
         background-size: 150% 130%;
@@ -447,6 +445,7 @@ a:link, a:visited {
         margin-bottom: 3rem;
     }
     body {
+        background: linear-gradient(90deg, rgba(31,31,38,1) 0%, rgba(30,37,51,1) 100%);
         #hero {
             background-image: none;
             #hero-copy {
