@@ -99,6 +99,7 @@ a:link, a:visited {
 }
 #hero #hero-copy {
   margin-left: 2.25rem;
+  margin-bottom: 1rem;
   font-family: "Raleway";
   color: #D6D6D6;
   font-size: 0.75rem;
@@ -402,8 +403,11 @@ a:link, a:visited {
     font-size: 1.25rem;
     text-align: center;
   }
-  body .hero-container {
+  body #hero .hero-container {
     justify-content: space-around;
+  }
+  body #hero #hero-copy {
+    margin-bottom: 0;
   }
   body #projects {
     max-width: 600px;

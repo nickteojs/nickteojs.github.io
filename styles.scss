@@ -120,6 +120,7 @@ a:link, a:visited {
     width: 100%;
     #hero-copy {
         margin-left: 2.25rem;
+        margin-bottom: 1rem;
         font-family: $font-body;
         color: $light;
         font-size: 0.75rem;
@@ -458,8 +459,13 @@ a:link, a:visited {
         text-align: center;
     }
     body {
-        .hero-container {
-            justify-content: space-around;
+        #hero {
+            .hero-container {
+                justify-content: space-around;
+            }
+            #hero-copy {
+                margin-bottom: 0;
+            }
         }
         #projects {
             max-width: 600px;
