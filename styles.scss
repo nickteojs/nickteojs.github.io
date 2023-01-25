@@ -98,7 +98,7 @@ a:link, a:visited {
 
 .next-section {
     color: $light;
-    bottom: 100px;
+    bottom: 125px;
     position: relative;
     font-size: 1.25rem;
 }
@@ -318,8 +318,6 @@ a:link, a:visited {
         }
         #experience-description {
             color: $light-body;
-            overflow-y: scroll;
-            max-height: 60%;
             color: $light;
             ul {
                 padding-left: 1.25rem;
@@ -376,7 +374,6 @@ a:link, a:visited {
         }
         #experience {
             #experience-copy {
-                max-height: 70%;
             }
         }
     }
