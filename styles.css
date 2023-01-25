@@ -379,23 +379,29 @@ a:link, a:visited {
     margin-left: 3rem;
   }
 }
+@media (min-width: 525px) {
+  body #hero #hero-copy {
+    margin-left: 5rem;
+  }
+}
 @media (min-width: 768px) {
   p, li {
     font-size: 1rem !important;
   }
+  .logo-container {
+    display: flex;
+  }
   .header {
     margin-bottom: 3rem;
   }
-  body {
-    background: linear-gradient(90deg, rgb(31, 31, 38) 0%, rgb(30, 37, 51) 100%);
+  .btt {
+    color: #D6D6D6;
+    position: relative;
+    top: 70px;
+    font-size: 1.25rem;
+    text-align: center;
   }
-  body #hero {
-    background-image: none;
-  }
-  body #hero #hero-copy h1 {
-    font-size: 4rem;
-  }
-  body #hero .hero-container {
+  body .hero-container {
     justify-content: space-around;
   }
   body #projects {
@@ -429,9 +435,6 @@ a:link, a:visited {
   body #projects #project-card #project-buttons {
     margin-block: 2rem;
   }
-  body .logo-container {
-    display: flex;
-  }
   body #experience {
     margin: 0 auto;
     max-width: 850px;
@@ -448,6 +451,14 @@ a:link, a:visited {
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    background: linear-gradient(90deg, rgb(31, 31, 38) 0%, rgb(30, 37, 51) 100%);
+  }
+  #hero #hero-copy h1 {
+    font-size: 4rem;
   }
 }
 @media (min-width: 1024px) {

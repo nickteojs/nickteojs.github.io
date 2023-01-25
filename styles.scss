@@ -331,7 +331,6 @@ a:link, a:visited {
     }
 }
 
-
 // Media Queries
 // Prevent hover state on mobile
 @media not all and (hover: none) {   
@@ -370,10 +369,6 @@ a:link, a:visited {
                         padding: 0.75rem 1.75rem;
                     }
                 }
-            }
-        }
-        #experience {
-            #experience-copy {
             }
         }
     }
@@ -430,8 +425,14 @@ a:link, a:visited {
                 margin-left: 3rem;
             }
         }
-        #projects {
-            #project-card {
+    }
+}
+
+@media (min-width: 525px) {
+    body {
+        #hero {
+            #hero-copy {
+                margin-left: 5rem;
             }
         }
     }
@@ -442,21 +443,22 @@ a:link, a:visited {
     p, li {
         font-size: 1rem !important;
     }
+    .logo-container {
+        display: flex;
+    }
     .header {
         margin-bottom: 3rem;
     }
+    .btt {
+        color: $light;
+        position: relative;
+        top: 70px;
+        font-size: 1.25rem;
+        text-align: center;
+    }
     body {
-        background: linear-gradient(90deg, rgba(31,31,38,1) 0%, rgba(30,37,51,1) 100%);
-        #hero {
-            background-image: none;
-            #hero-copy {
-                h1 {
-                    font-size: $heading;
-                }
-            }
-            .hero-container {
-                justify-content: space-around;
-            }
+        .hero-container {
+            justify-content: space-around;
         }
         #projects {
             max-width: 600px;
@@ -491,9 +493,6 @@ a:link, a:visited {
                 }
             }
         }
-        .logo-container {
-            display: flex;
-        }
         #experience {
             margin: 0 auto;
             max-width: 850px;
@@ -511,6 +510,19 @@ a:link, a:visited {
                     overflow: hidden;
                     max-height: min-content;
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: linear-gradient(90deg, rgba(31,31,38,1) 0%, rgba(30,37,51,1) 100%);
+    }
+    #hero {
+        #hero-copy {
+            h1 {
+                font-size: $heading;
             }
         }
     }

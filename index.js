@@ -12,18 +12,15 @@ project.forEach(list => {
 
 // Event listener to determine whether mousemove listener for logo should be active
 window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 900) {
         document.addEventListener('mousemove', rotateLogo);
-    } else if (window.innerWidth < 768) {
+    } else if (window.innerWidth < 900) {
         document.removeEventListener('mousemove', rotateLogo);
     } 
 })
 
 // Logo Controller
 const logo = document.getElementById('logo');
-
-// screen.orientation.addEventListener('change', (e) => {
-// })
 
 const rotateLogo = e => {
     const horizontalDeg = (((e.clientX / window.innerWidth) * 90) - 45) / 3.5;
