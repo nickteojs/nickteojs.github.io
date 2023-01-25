@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  padding: env(safe-area-inset);
   background: linear-gradient(90deg, rgb(30, 30, 42) 0%, rgb(35, 52, 85) 100%);
 }
 
