@@ -100,12 +100,13 @@ a:link, a:visited {
     color: $light;
     bottom: 200px;
     position: relative;
+    font-size: 1.25rem;
 }
 
 .btt {
     color: $light;
-    top: -30px;
-    position: relative;
+    margin-top: 1rem;
+    font-size: 1.25rem;
     text-align: center;
 }
 
