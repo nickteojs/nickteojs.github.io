@@ -32,7 +32,7 @@ export const experiences = [
         stack: "Vue, Vuex, SCSS",
         date: "June 2022 - Aug 2022",
         description: [
-            "Wrote a UI/UX report based on my user journey and experience, which served as the basis of my internship on top of requests by the management.",
+            "Created a UI/UX report which served as the basis of my internship on top of requests by the company.",
             "Increased product engagement by implementing a light-box gallery feature, which is crucial for high value products.",
             "Implemented search functionality for company’s blogs and guide articles using backend API’s. Allows potential customers to be more informed on the brand and its products.",
             "Rebuilt navigation to be less cluttered, cleaner, and more visually appealing.",
