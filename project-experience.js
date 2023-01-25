@@ -33,9 +33,9 @@ export const experiences = [
         date: "June 2022 - Aug 2022",
         description: [
             "Created a UI/UX report which served as the basis of my internship on top of requests by the company.",
-            "Increased product engagement by implementing a light-box gallery feature, which is crucial for high value products.",
-            "Implemented search functionality for company’s blogs and guide articles using backend API’s. Allows potential customers to be more informed on the brand and its products.",
-            "Rebuilt navigation to be less cluttered, cleaner, and more visually appealing.",
+            "Increased product engagement by implementing a light-box gallery, which is crucial for high value products.",
+            "Implemented search functionality for company’s blogs and guide articles using backend API’s.",
+            "Rebuilt navigation to be simpler while improving visual appeal.",
             "Fixed existing UI/UX bugs, redeveloped parts of the site to ensure responsiveness and compatibility."
         ]
     }
