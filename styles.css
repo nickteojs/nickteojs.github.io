@@ -84,10 +84,6 @@ a:link, a:visited {
   text-align: center;
 }
 
-#projects, #experience {
-  height: 800px;
-}
-
 #hero {
   width: 100%;
   height: 100vh;
@@ -142,7 +138,7 @@ a:link, a:visited {
 }
 
 #projects {
-  margin: 0 auto;
+  margin: 4rem auto;
   max-width: 1280px;
   font-family: "Raleway";
   display: flex;
@@ -251,7 +247,7 @@ a:link, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 #experience #experience-title, #experience #company-title {
   opacity: 0;
@@ -438,7 +434,8 @@ a:link, a:visited {
     margin-block: 2rem;
   }
   body #experience {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 850px;
   }
   body #experience #experience-copy #role-stack #stack-date {
@@ -460,14 +457,6 @@ a:link, a:visited {
   }
   #hero #hero-copy h1 {
     font-size: 4rem;
-  }
-}
-@media (min-width: 1024px) {
-  #hero, #projects, #experience {
-    height: 100vh;
-  }
-  #experience {
-    margin-top: 0;
   }
 }
 @keyframes slide-right-1 {
