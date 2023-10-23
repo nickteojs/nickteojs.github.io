@@ -8,8 +8,8 @@ export const projects = [
         demo: "https://www.altura.sg/"
     },
     {
-        name: "Futures Masterclass (NUS)",
-        description1: "&#x2022; Landing page for Lee Kuan Yew School of Public Policy's masterclass: Foresight to Policy.",
+        name: "Futures Masterclass",
+        description1: "&#x2022; Landing page for Lee Kuan Yew School of Public Policy's (NUS) masterclass: Foresight to Policy.",
         description2: "&#x2022; HTML, Sass, TypeScript",
         thumbnail: "./assets/images/lkyspp.webp",
         github: "",

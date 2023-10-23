@@ -78,9 +78,11 @@ a:link, a:visited {
   font-size: 1.25rem;
 }
 
-.btt {
+#btt {
+  position: relative;
   color: #D6D6D6;
   margin-top: 1rem;
+  padding-bottom: 4rem;
   font-size: 1.25rem;
   text-align: center;
 }
@@ -192,8 +194,7 @@ a:link, a:visited {
 }
 #projects #project-card {
   width: 80%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   background-color: rgba(16, 16, 16, 0.25);
   border-radius: 2rem;
   color: #D6D6D6;
@@ -343,9 +344,6 @@ a:link, a:visited {
   html {
     font-size: 16px;
   }
-  .btt {
-    top: 130px;
-  }
   body {
     background-size: 150% 160%;
     background-position: 60% 55%;
@@ -424,8 +422,7 @@ a:link, a:visited {
   }
   body #projects #project-card {
     width: 75%;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
   body #projects #project-card #project-name {
     margin: 2rem 0 1rem 0;
