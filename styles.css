@@ -66,15 +66,12 @@ a:link, a:visited {
   scroll-snap-align: start;
 }
 
-#next-section {
-  display: flex;
-  justify-content: center;
-}
-
 .next-section {
   color: #D6D6D6;
-  bottom: 125px;
-  position: relative;
+  bottom: 2rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -6.25px;
   font-size: 1.25rem;
 }
 
@@ -87,12 +84,13 @@ a:link, a:visited {
   text-align: center;
 }
 
-#hero, #projects, #experience {
+#projects, #experience {
   height: 800px;
 }
 
 #hero {
   width: 100%;
+  height: 100vh;
 }
 #hero #hero-copy {
   margin-left: 2.25rem;
@@ -253,6 +251,7 @@ a:link, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 #experience #experience-title, #experience #company-title {
   opacity: 0;
@@ -464,11 +463,11 @@ a:link, a:visited {
   }
 }
 @media (min-width: 1024px) {
-  html {
-    scroll-snap-type: y mandatory;
-  }
   #hero, #projects, #experience {
     height: 100vh;
+  }
+  #experience {
+    margin-top: 0;
   }
 }
 @keyframes slide-right-1 {
