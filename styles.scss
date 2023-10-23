@@ -13,7 +13,7 @@ body {
 }
 
 section {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
 }
 
 p, li {
@@ -199,6 +199,7 @@ a:link, a:visited {
         text-align: center;
         .project-item {
             cursor: pointer;
+            align-self: center;
             i {
                 margin-bottom: 0.75rem;
             }
@@ -220,7 +221,9 @@ a:link, a:visited {
         }
     }
     #project-card {
-        width: 65%;
+        width: 80%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         background-color: rgba(16, 16, 16, 0.25);
         border-radius: 2rem;
         color: $light;
@@ -247,12 +250,13 @@ a:link, a:visited {
         }
         #project-buttons {
             width: 80%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            // grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-block: 2rem;
-            button {
-                opacity: 0;
+            .button {
+                text-align: center;
+                opacity: 1;
                 background-color: #424B64;
                 font-family: $font-button;
                 color: $light;
@@ -263,6 +267,10 @@ a:link, a:visited {
                 transition: 0.25s ease-in-out;
                 &:hover {
                     background-color: #32394d;
+                }
+                &:disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
                 }
             }
         }
@@ -358,16 +366,15 @@ a:link, a:visited {
                 width: 80%;
                 .project-item {
                     p {
-                        font-size: 0.7rem;
+                        // font-size: 0.7rem;
                     }
                 }
             }
             #project-card {
-                width: 85%;
                 #project-buttons {
                     width: auto;
                     margin-block: 1rem;
-                    button {
+                    .button {
                         padding: 0.75rem 1.75rem;
                     }
                 }
@@ -451,10 +458,10 @@ a:link, a:visited {
     .header {
         margin-bottom: 3rem;
     }
-    .btt {
+    #btt {
         color: $light;
         position: relative;
-        top: 70px;
+        top: 2rem;
         font-size: 1.25rem;
         text-align: center;
     }
@@ -484,6 +491,9 @@ a:link, a:visited {
                 margin-left: 0.75rem;
             }
             #project-card {
+                width: 75%;
+                padding-top: 0;
+                padding-bottom: 0;
                 #project-name {
                     margin: 2rem 0 1rem 0;
                 }

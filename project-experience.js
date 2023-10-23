@@ -1,42 +1,44 @@
 export const projects = [
     {
-        name: "Story",
-        description1: "&#x2022; Full-stack responsive blog application with authentication built using Firebase.",
-        description2: "&#x2022; React, Redux Toolkit, React Router, Material UI, Firestore.",
-        thumbnail: "./assets/images/story.JPG",
-        github: "https://github.com/nickteojs/react-blog",
-        demo: "https://react-blog-698ba.web.app/"
+        name: "Altura",
+        description1: "&#x2022; Full website for Qingjian Realty's upcoming Executive Condominium, Altura.",
+        description2: "&#x2022; HTML, Sass, Bootstrap, TypeScript",
+        thumbnail: "./assets/images/altura.webp",
+        github: "",
+        demo: "https://www.altura.sg/"
     },
     {
-        name: "Item-Leveler",
-        description1: "&#x2022; Community tool for MapleMS to simulate game equipment progression.",
-        description2: "&#x2022; React, Chakra UI.",
-        thumbnail: "./assets/images/item-leveler.JPG",
-        github: "https://github.com/nickteojs/item-leveler",
-        demo: "https://mow-leveller.netlify.app/"
+        name: "Futures Masterclass (NUS)",
+        description1: "&#x2022; Landing page for Lee Kuan Yew School of Public Policy's masterclass: Foresight to Policy.",
+        description2: "&#x2022; HTML, Sass, TypeScript",
+        thumbnail: "./assets/images/lkyspp.webp",
+        github: "",
+        demo: "https://lkyspp.nus.edu.sg/executive-education/futures-masterclass-foresight-to-policy/"
     },
     {
-        name: "Countries Wiki",
-        description1: "&#x2022; Responsive countries wiki using countries API as part of a frontendmentor challenge.",
-        description2: "&#x2022; React, React Query 3.",
-        thumbnail: "./assets/images/countries.JPG",
-        github: "https://github.com/nickteojs/rest-countries",
-        demo: "https://nickteo-rest-countries.netlify.app/"
+        name: "Y (Project)",
+        description1: "&#x2022; Twitter Clone (Test Account: bobby, 12345)",
+        description2: "&#x2022; Next.js, NextAuth, TypeScript, Tailwind CSS, MongoDB, Mongoose",
+        thumbnail: "./assets/images/y.webp",
+        github: "https://github.com/nickteojs/y",
+        demo: "https://y-nicktjs.vercel.app/"
     },
 ];
 
 export const experiences = [
     {
-        name: "Ginza Xiaoma",
-        role: "Frontend Developer Intern",
-        stack: "Vue, Vuex, SCSS",
-        date: "June 2022 - Aug 2022",
+        name: "BOVEM",
+        role: "Web Developer Intern",
+        stack: "Shopify Hydrogen (React), Shopify Liquid, CSS",
+        date: "May 2023 - July 2023",
         description: [
-            "Created a UI/UX report which served as the basis of my internship on top of requests by the company.",
-            "Increased product engagement by implementing a light-box gallery, which is crucial for high value products.",
-            "Implemented search functionality for company’s blogs and guide articles using backend API’s.",
-            "Rebuilt navigation to be simpler while improving visual appeal.",
-            "Fixed existing UI/UX bugs, redeveloped parts of the site to ensure responsiveness and compatibility."
+            "Worked as the sole web developer in a startup to maintain and revamp parts of the storefront using Hydrogen React - Shopify’s React library for interacting with their Storefront API.",
+            "Collaborated closely with the creative lead and founders to revamp the flagship product page - Globe Trimmer 2.0.",
+            "Developed interactive reusable components for use across all product pages.",
+            "Audited entire storefront to ensure cross-browser compatibility and responsiveness.",
+            "Redeveloped all store email notifications with new designs and custom datasets formulated using Shopify Liquid.",
+            "Increased and maintained Ahrefs site audit score to 100 by ensuring strict adherence to best SEO practices.",
+            "Troubleshot and rectified Google Analytics inconsistencies so that product sales can be accurately tracked and used for advertising."
         ]
     }
 ]

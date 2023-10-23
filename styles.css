@@ -12,10 +12,6 @@ body {
   background: linear-gradient(90deg, rgb(30, 30, 42) 0%, rgb(35, 52, 85) 100%);
 }
 
-section {
-  scroll-snap-align: start;
-}
-
 p, li {
   font-size: 0.875rem;
 }
@@ -63,8 +59,7 @@ a:link, a:visited {
 }
 
 .snap-parent {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 .snap-child {
@@ -176,6 +171,7 @@ a:link, a:visited {
 }
 #projects #project-list .project-item {
   cursor: pointer;
+  align-self: center;
 }
 #projects #project-list .project-item i {
   margin-bottom: 0.75rem;
@@ -195,7 +191,9 @@ a:link, a:visited {
   transition: 0.5s transform ease-in-out;
 }
 #projects #project-card {
-  width: 65%;
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: rgba(16, 16, 16, 0.25);
   border-radius: 2rem;
   color: #D6D6D6;
@@ -223,13 +221,13 @@ a:link, a:visited {
 }
 #projects #project-card #project-buttons {
   width: 80%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 1rem;
   margin-block: 2rem;
 }
-#projects #project-card #project-buttons button {
-  opacity: 0;
+#projects #project-card #project-buttons .button {
+  text-align: center;
+  opacity: 1;
   background-color: #424B64;
   font-family: "Raleway Bold";
   color: #D6D6D6;
@@ -239,8 +237,12 @@ a:link, a:visited {
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
-#projects #project-card #project-buttons button:hover {
+#projects #project-card #project-buttons .button:hover {
   background-color: #32394d;
+}
+#projects #project-card #project-buttons .button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 #experience {
@@ -323,17 +325,11 @@ a:link, a:visited {
   body #projects #project-list {
     width: 80%;
   }
-  body #projects #project-list .project-item p {
-    font-size: 0.7rem;
-  }
-  body #projects #project-card {
-    width: 85%;
-  }
   body #projects #project-card #project-buttons {
     width: auto;
     margin-block: 1rem;
   }
-  body #projects #project-card #project-buttons button {
+  body #projects #project-card #project-buttons .button {
     padding: 0.75rem 1.75rem;
   }
 }
@@ -396,10 +392,10 @@ a:link, a:visited {
   .header {
     margin-bottom: 3rem;
   }
-  .btt {
+  #btt {
     color: #D6D6D6;
     position: relative;
-    top: 70px;
+    top: 2rem;
     font-size: 1.25rem;
     text-align: center;
   }
@@ -425,6 +421,11 @@ a:link, a:visited {
   body #projects #project-controls {
     width: 65%;
     margin-left: 0.75rem;
+  }
+  body #projects #project-card {
+    width: 75%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   body #projects #project-card #project-name {
     margin: 2rem 0 1rem 0;
@@ -453,7 +454,6 @@ a:link, a:visited {
   body #experience #experience-copy #experience-description {
     color: #b6b6b6;
     overflow: hidden;
-    max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;
   }
@@ -468,16 +468,10 @@ a:link, a:visited {
 }
 @media (min-width: 1024px) {
   html {
-    -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
   }
   #hero, #projects, #experience {
     height: 100vh;
-  }
-}
-@-webkit-keyframes slide-right-1 {
-  to {
-    transform: translateX(115%);
   }
 }
 @keyframes slide-right-1 {
@@ -485,29 +479,14 @@ a:link, a:visited {
     transform: translateX(115%);
   }
 }
-@-webkit-keyframes slide-right-2 {
-  to {
-    transform: translateX(235%);
-  }
-}
 @keyframes slide-right-2 {
   to {
     transform: translateX(235%);
   }
 }
-@-webkit-keyframes slide-left-1 {
-  to {
-    transform: translateX(115%);
-  }
-}
 @keyframes slide-left-1 {
   to {
     transform: translateX(115%);
-  }
-}
-@-webkit-keyframes slide-left-2 {
-  to {
-    transform: translateX(0%);
   }
 }
 @keyframes slide-left-2 {

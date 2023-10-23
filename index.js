@@ -46,13 +46,19 @@ const demoUrl = document.getElementById('demo-link');
 let currentProject = 0;
 
 const setProjectDetails = idx => {
+    const projectInfo = projects[idx];
+    projectName.textContent = projectInfo.name;
+    projectDesc1.innerHTML = projectInfo.description1;
+    projectDesc2.innerHTML = projectInfo.description2;
+    projectThumbnail.src = projectInfo.thumbnail;
     // Check if ID of project is between 0 and 2
-    if (idx >= 0 && idx <= 2) {
-        const projectInfo = projects[idx];
-        projectName.textContent = projectInfo.name;
-        projectDesc1.innerHTML = projectInfo.description1;
-        projectDesc2.innerHTML = projectInfo.description2;
-        projectThumbnail.src = projectInfo.thumbnail;
+    if (idx === 0 || idx === 1) {
+        githubUrl.style.display = 'none';
+        demoUrl.innerText = 'View';
+        demoUrl.href = projectInfo.demo;
+    } else {
+        githubUrl.style.display = 'block';
+        demoUrl.innerText = 'Demo';
         githubUrl.href = projectInfo.github;
         demoUrl.href = projectInfo.demo;
     }
