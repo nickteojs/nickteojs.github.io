@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Nick Teo - Frontend Developer</title>
     <link rel="icon" href="./assets/images/favicon/favicon.ico" type="image/x-icon">
-    <script type="module">
+    <!-- <script type="module">
       import slide from "./index.js";
       window.slide = slide;
-    </script>
+    </script> -->
+    <script type="module" src="./index.js"></script>
     <script type="module" src="./animations.js"></script>
 </head>
 <body>
@@ -64,17 +65,67 @@
     </section>
     <section id="projects">
         <h3 class="header" id="project-title">Works</h3>
-        <div id="project-list">
+        <em id="github-plug">My personal projects can be found on <a href="http://github.com/nickteojs" target="_blank">Github.</a></em>
+        <div id="works-grid">
+          <div class="work-item">
+            <a href="https://www.altura.sg/" target="_blank">
+              <!-- <div class="grey-overlay"></div> -->
+              <picture>
+                <source srcset="./assets/images/altura.webp" type="image/webp">
+                <img class="work-thumbnail" src="./assets/images/altura.png" alt="Altura landing page">
+              </picture>
+            </a>
+            <div class="line"></div>
+            <strong>Qingjian Realty</strong>
+            <p>Altura Executive Condominium</p>
+          </div>
+          <div class="work-item">
+            <a href="https://lkyspp.nus.edu.sg/executive-education/futures-masterclass-foresight-to-policy/" target="_blank">
+              <!-- <div class="grey-overlay"></div> -->
+              <picture>
+                <source srcset="./assets/images/lkyspp.webp" type="image/webp">
+                <img class="work-thumbnail" src="./assets/images/lkyspp.png" alt="LKYSPP landing page">
+              </picture>
+            </a>
+            <div class="line"></div>
+            <strong>Lee Kuan Yew School of Public Policy (NUS)</strong>
+            <p>Futures Masterclass: Foresight To Policy</p>
+          </div>
+        </div>
+        <div id="works-grid">
+          <div class="work-item">
+            <a href="https://www.bovem.co/" target="_blank">
+              <!-- <div class="grey-overlay"></div> -->
+              <picture>
+                <source srcset="./assets/images/bovem.webp" type="image/webp">
+                <img class="work-thumbnail" src="./assets/images/bovem.png" alt="Bovem landing page">
+              </picture>
+            </a>
+            <div class="line"></div>
+            <strong>BOVEM</strong>
+            <p>Webstore</p>
+          </div>
+          <div class="work-item">
+            <a href="https://ginzaxiaoma.com" target="_blank">
+              <!-- <div class="grey-overlay"></div> -->
+              <picture>
+                <source srcset="./assets/images/ginzaxiaoma.webp" type="image/webp">
+                <img class="work-thumbnail" src="./assets/images/ginzaxiaoma.png" alt="Ginza Xiaoma landing page">
+              </picture>
+            </a>
+            <div class="line"></div>
+            <strong>Ginza Xiaoma</strong>
+            <p>Webstore</p>
+          </div>
+        </div>
+        <!-- <div id="project-list">
           <div class="project-item hover" onclick="slide(0)">
-            <!-- <i class="fas fa-pen fa-lg"></i> -->
             <p>Altura</p>
           </div>
           <div class="project-item hover" onclick="slide(1)">
-            <!-- <i class="fas fa-calculator fa-lg"></i> -->
             <p>Futures Masterclass</p>
           </div>
           <div class="project-item hover" onclick="slide(2)">
-            <!-- <i class="fab fa-wikipedia-w fa-lg"></i> -->
             <p>Y (Project)</p>
           </div>
         </div>
@@ -92,7 +143,7 @@
             <a id="github-link" class="button" target="_blank">Github</a>
             <a id="demo-link" class="button" target="_blank">Demo</a>
           </div>
-        </div>
+        </div> -->
     </section>
     <section id="experience">
       <h3 class="header" id="experience-title">Experience (Latest)</h3>

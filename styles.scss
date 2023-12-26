@@ -105,7 +105,7 @@ a:link, a:visited {
     position: relative;
     color: $light;
     margin-top: 1rem;
-    padding-bottom: 4rem;
+    margin-bottom: 4rem;
     font-size: 1.25rem;
     text-align: center;
 }
@@ -185,6 +185,60 @@ a:link, a:visited {
         opacity: 0;
         position: relative;
         top: 50px;
+    }
+    .header {
+        margin-bottom: 1rem;
+    }
+    #github-plug {
+        color: $light-body;
+        margin-bottom: 3rem;
+        font-size: 0.875rem;
+        a {
+            color: $light-body;
+            text-decoration: underline;
+            transition: 0.1s all ease-in-out;
+            &:hover {
+                color: $light;
+            }
+            &:focus {
+                color: $light;
+            }
+        }
+    }
+    #works-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        &:first-of-type {
+            margin-bottom: 4rem;
+        }
+        .work-item {
+            display: flex;
+            flex-direction: column;
+            max-width: 75%;
+            margin: 0 auto;
+            a {
+                position: relative;
+                .grey-overlay {
+                    opacity: 0;
+                    transition: 0.25s all ease-in-out;
+                }
+                .work-thumbnail {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                }
+            }
+            .line {
+                margin-block: 1.5rem;
+            }
+            strong {
+                margin-bottom: 0.5rem;
+            }
+            p {
+                color: $light-body;
+            }
+        }
     }
     h3 {
         font-size: $sub-heading;
@@ -475,7 +529,7 @@ a:link, a:visited {
             }
         }
         #projects {
-            max-width: 600px;
+            // max-width: 600px;
             #project-list {
                 width: 70%;
             }
@@ -554,6 +608,45 @@ a:link, a:visited {
     }
     #experience {
         // margin-top: 8rem;
+    }
+    #projects {
+        margin: 10rem auto;
+        max-width: 700px;
+        #works-grid {
+            gap: 3rem;
+            flex-direction: row;
+            .work-item {
+                a {
+                    overflow: hidden;
+                    .grey-overlay {
+                        width: 100%;
+                        height: 100%;
+                        background-color: black;
+                        opacity: 30%;
+                        position: absolute;
+                        transition: 0.25s all ease-in-out;
+                        &:hover {
+                            opacity: 0;
+                        }
+                    }
+                    .work-thumbnail {
+                        filter: grayscale(1);
+                        transform: scale(1);
+                        transition: 0.4s all ease-in-out;
+                        &:hover {
+                            filter: grayscale(0);
+                            transform: scale(1.025);
+                        }
+                    }
+                    &:focus {
+                        .work-thumbnail {
+                            filter: grayscale(0);
+                            transform: scale(1.025);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

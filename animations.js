@@ -97,14 +97,21 @@ const callback = entries => {
   entries.forEach(entry => {
       const target = entry.target.id;
       const isIntersecting = entry.isIntersecting;
-      if (target === 'project-card' && isIntersecting === true) {
+      if (target === 'project-title' && isIntersecting === true) {
           if (projectAnimated === false) {
             projectTl.add({
-              targets: [projectTitle, projectList, projectControls, projectName, projectDesc, projectThumbnail],
+              // targets: [projectTitle, projectList, projectControls, projectName, projectDesc, projectThumbnail],
+              targets: [projectTitle],
               translateY: -50,
               opacity: 1,
               duration: 1000,
               delay: 250
+            })
+            .add({
+              targets: [line[1], line[2], line[3], line[4]],
+              width: '15%',
+              duration: 1000,
+              easing: 'cubicBezier(.75, .05, .1, .3)',
             })
             projectButtonsTl.add({
               targets: buttonArray,
@@ -116,7 +123,7 @@ const callback = entries => {
       } else if (target === 'role-list' && isIntersecting === true) {
           if (experienceAnimated === false) {
             expTl.add({
-              targets: line[1],
+              targets: line[5],
               width: '15%',
               duration: 1000,
               easing: 'cubicBezier(.75, .05, .1, .3)',
@@ -141,5 +148,6 @@ const callback = entries => {
 
 let sectionObserver = new IntersectionObserver(callback);
 sectionObserver.observe(heroCopy);
-sectionObserver.observe(projectCard);
+sectionObserver.observe(projectTitle);
+// sectionObserver.observe(projectCard);
 sectionObserver.observe(roleList);
